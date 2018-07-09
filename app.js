@@ -33,6 +33,7 @@ App({
           typeof cb === 'function' && cb(this.globalData.locationInfo);
       } else {
           wx.getLocation({
+              type: 'gcj02', // wgs84
               success: function(res) {
                   that.globalData.locationInfo= res;
                   typeof cb === 'function' && cb(that.globalData.locationInfo);

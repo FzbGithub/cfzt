@@ -6,7 +6,31 @@ Page({
      */
     data: {
         isCloseApp: app.globalData.ifCloseApp,
-        location: null
+        location: null,
+        mapHeight: app.globalData.getSystemInfo.windowHeight,
+        controls: [{
+            id:0,
+            iconPath:'/images/icon_nav_bar.png',
+            position:{
+                width: 38,
+                height: 38,
+                left: app.globalData.getSystemInfo.windowWidth-50,
+                top: app.globalData.getSystemInfo.windowHeight-100
+            },
+            clickable: true
+        }, {
+            id: 1,
+            iconPath: '/images/icon_location.png',
+            position: {
+                width: 28,
+                height: 28,
+                left: app.globalData.getSystemInfo.windowWidth / 2 - 14,
+                top: app.globalData.getSystemInfo.windowHeight / 2 - 14
+            },
+            clickable: false
+        }],
+        markers:[],
+        polyline:[]
     },
 
     /**
@@ -83,11 +107,12 @@ Page({
     onReachBottom: function () {
 
     },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    // 点击controltap
+    controlTap(e) {
+        this.mapCtx = wx.createMapContext('appMap', this);
+        this.mapCtx.moveToLocation();
+    },
+    // 视野发生改变时
+    regionChange(e) {
     }
 })
