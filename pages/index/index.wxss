@@ -1,0 +1,29 @@
+.control-item {
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    font-size: 36rpx;
+    line-height: 36rpx;
+    background-color: #fff;
+    box-shadow: 0 0 4 #000;
+}
+.car,.other-car {
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 18rpx;
+}
+.active-item { color: coral; }
+.control-options {
+    position:fixed;
+    height:200px;
+    width:100%;
+    bottom:20px;
+}
+.control-setup-wrap {
+    margin:0 20px;
+    background-color:#fff;
+    position:relative;
+    height:100%;
+}

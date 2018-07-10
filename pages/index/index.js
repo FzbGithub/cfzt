@@ -7,6 +7,7 @@ Page({
    */
   data: {
     isCloseApp: app.globalData.ifCloseApp,
+    activeCarType: false,
     location: null,
     locationName: {
       country:'',
@@ -23,7 +24,7 @@ Page({
         width: 36,
         height: 36,
         left: app.globalData.getSystemInfo.windowWidth - 50,
-        top: app.globalData.getSystemInfo.windowHeight - 100
+        top: app.globalData.getSystemInfo.windowHeight/2
       },
       clickable: true
     }, {
@@ -138,5 +139,16 @@ Page({
   },
   // 视野发生改变时
   regionChange(e) {
+  },
+  // 切换不同的车类型
+  selectActiveCar() {
+    this.setData({
+        activeCarType: false
+    })
+  },
+  selectActiveOtherCar() {
+      this.setData({
+          activeCarType: true
+      })
   }
 })
