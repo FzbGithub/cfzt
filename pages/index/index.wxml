@@ -1,13 +1,26 @@
 <view wx:if="{{!isCloseAPP}}">
     <map id="appMap" style='width:100%;height:{{mapHeight}}px;' longitude='{{location.longitude}}' latitude='{{location.latitude}}' show-location="{{true}}" markers='{{markers}}' controls='{{controls}}' polyline='{{polyline}}' bindcontroltap="controlTap" bindregionchange='regionChange'>
     <cover-view class="control-item">
+        <cover-view class='userInfo'>
+            <cover-image class='user-icon' src='../../images/avatar.png'></cover-image>
+        </cover-view>
         <cover-view class='car {{!activeCarType?"active-item":""}}' bindtap='selectActiveCar'>出租车</cover-view>
         <cover-view class='other-car {{activeCarType?"active-item":""}}' bindtap='selectActiveOtherCar'>网约车</cover-view>
     </cover-view>
     <cover-view class='control-options'>
         <cover-view class='control-setup-wrap'>
-            <cover-view>起点</cover-view>
-            <cover-view></cover-view>
+            <cover-view class='address-wrap'>
+                <cover-view class="pickup-car ">
+                    <cover-view class="position-icon position-color-green"></cover-view>
+                    <cover-view class='address'>{{locationName.name || '正在获取上车位置...'}}</cover-view>
+                </cover-view>
+                <cover-view class="pickup-car">
+                    <cover-view class="position-icon position-color-coral"></cover-view>
+                    <cover-view class='address destination'>你要去哪</cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class="call-car-btn">一键叫车</cover-view>
+            <cover-view class='company-descripe'>Fy出行，方便你我</cover-view>
         </cover-view>
     </cover-view>
     </map>

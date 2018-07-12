@@ -8,8 +8,19 @@
     background-color: #fff;
     box-shadow: 0 0 4 #000;
 }
-.car,.other-car {
+.userInfo {
+    padding-top: 1px;
     flex: 1;
+    text-align: center;
+}
+.userInfo .user-icon {
+    display:inline-block;
+    width:30px;
+    height:30px;
+
+}
+.car,.other-car {
+    flex: 3;
     text-align: center;
     vertical-align: middle;
     padding-top: 18rpx;
@@ -26,4 +37,51 @@
     background-color:#fff;
     position:relative;
     height:100%;
+    border-radius:6px;
+}
+.address-wrap {
+    margin: 20px 10px;
+}
+.call-car-btn {
+    height: 40px;
+    margin:0 6px;
+    line-height: 40px;
+    border-radius: 4px;
+    background-color: green;
+    text-align: center;
+}
+.pickup-car {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 26px;
+    border-bottom: solid 1px #ddd;
+}
+.pickup-car .position-icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 6px;
+    top: 14px;
+    border-radius: 50%;
+}
+.position-color-green {
+    background-color: green;
+}
+.position-color-coral {
+    background-color: coral;
+}
+.pickup-car .address {
+    line-height: 40px;
+}
+.pickup-car .address.destination {
+    color: coral;
+}
+.company-descripe {
+    height:38px;
+    line-height:38px;
+    font-size:12px;
+    color:#999;
+    text-align: center;
 }
