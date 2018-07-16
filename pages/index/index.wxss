@@ -85,3 +85,32 @@
     color:#999;
     text-align: center;
 }
+.personnal-message-wrap {
+  position:fixed;
+  z-index:100;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.personal-list {
+  height:100%;
+  width: 80%;
+  background-color:#fff;
+  position:relative;
+
+}
+.personal-wrap {
+  padding: 20px;
+}
+.personal-item {
+  font-size: 16px;
+}
+.personal-item .personal-icon {
+  display:inline-block;
+  width:46px;
+  height:46px;
+  border-radius: 50%;
+}

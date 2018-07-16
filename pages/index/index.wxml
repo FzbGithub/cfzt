@@ -23,6 +23,23 @@
             <cover-view class='company-descripe'>Fy出行，方便你我</cover-view>
         </cover-view>
     </cover-view>
+    <cover-view class="personnal-message-wrap">
+      <cover-view class="personal-list">
+        <cover-view class="personal-wrap">
+          <cover-view class="personal-item">
+            <cover-image class='personal-icon' src='../../images/avatar.png'></cover-image>
+            <cover-view>请登录</cover-view>
+          </cover-view>
+          <cover-view class="personal-item">我的行程</cover-view>
+          <cover-view class="personal-item">我的卡券</cover-view>
+          <cover-view class="personal-item">我的红包</cover-view>
+          <cover-view class="personal-item">推荐分享</cover-view>
+          <cover-view class="personal-item">系统设置</cover-view>
+          <cover-view class="personal-item">意见反馈</cover-view>
+        </cover-view>
+        
+      </cover-view>
+    </cover-view>
     </map>
 </view>
 <navigator wx:if="{{isCloseApp}}" target="miniProgram" open-type="exit" ><button type="default">退出小程序</button></navigator>
