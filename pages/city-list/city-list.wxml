@@ -1,0 +1,2 @@
+<!--pages/city-list/city-list.wxml-->
+<retrieval style="max-height: 100%;" bindcitytap="cityTap"></retrieval>

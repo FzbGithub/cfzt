@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择目的地",
+  "usingComponents":{
+    "retrieval": "../../components/retrieval/retrieval"
+  }
+}

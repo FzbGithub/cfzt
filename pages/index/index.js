@@ -7,6 +7,7 @@ Page({
      */
     data: {
         isCloseApp: app.globalData.ifCloseApp,
+        isShowPersonal: false,
         activeCarType: false,
         location: null,
         controlChangeMapView: false,

@@ -1,4 +1,4 @@
-<view wx:if="{{!isCloseAPP}}">
+<view  wx:if="{{!isCloseAPP}}">
     <map id="appMap" style='width:100%;height:{{mapHeight}}px;' longitude='{{location.longitude}}' latitude='{{location.latitude}}' show-location="{{true}}" markers='{{markers}}' controls='{{controls}}' polyline='{{polyline}}' bindcontroltap="controlTap" bindregionchange='regionChange'>
     <cover-view class="control-item">
         <cover-view class='userInfo'>
@@ -23,7 +23,7 @@
             <cover-view class='company-descripe'>Fy出行，方便你我</cover-view>
         </cover-view>
     </cover-view>
-    <cover-view class="personnal-message-wrap">
+    <cover-view class="personnal-message-wrap" wx:if="{{isShowPersonal}}">
       <cover-view class="personal-list">
         <cover-view class="personal-wrap">
           <cover-view class="personal-item">
